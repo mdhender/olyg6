@@ -144,3 +144,7 @@ Golden files live under `testdata/golden/` (the Go toolchain ignores any
 - When you discover and fix an original bug, note it (a `BUGS.md` entry or a
   code comment referencing the C location) and add a regression test.
 - Do not commit or push unless explicitly asked.
+- **Branching (alpha):** while the version carries an `-alpha` pre-release
+  marker (see `version.go`), commit and push directly to `main` — no feature
+  branches or PRs. Once we drop the `-alpha` marker, switch to branch-per-change
+  with PRs.
