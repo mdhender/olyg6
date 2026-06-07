@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Endless Prairie",
+    "row": 41,
+    "col": 6,
+    "glyph": "p"
+  },
+  {
+    "name": "Eastwood",
+    "row": 25,
+    "col": 15,
+    "glyph": "f"
+  },
+  {
+    "name": "Elysian Fields",
+    "row": 11,
+    "col": 69,
+    "glyph": "p"
+  }
+]

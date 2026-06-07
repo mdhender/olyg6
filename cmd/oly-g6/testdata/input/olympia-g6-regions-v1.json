@@ -1,0 +1,117 @@
+[
+  {
+    "name": "Great Sea",
+    "row": 0,
+    "col": 0
+  },
+  {
+    "name": "Orwald",
+    "row": 4,
+    "col": 28
+  },
+  {
+    "name": "Sentrun",
+    "row": 9,
+    "col": 13
+  },
+  {
+    "name": "Resh",
+    "row": 11,
+    "col": 68
+  },
+  {
+    "name": "Condmedic",
+    "row": 17,
+    "col": 46
+  },
+  {
+    "name": "Aindorf",
+    "row": 22,
+    "col": 27
+  },
+  {
+    "name": "Thaholm",
+    "row": 29,
+    "col": 65
+  },
+  {
+    "name": "Lethrys",
+    "row": 36,
+    "col": 35
+  },
+  {
+    "name": "Mageland",
+    "row": 37,
+    "col": 11
+  },
+  {
+    "name": "Diuran",
+    "row": 39,
+    "col": 50
+  },
+  {
+    "name": "Zapstowe",
+    "row": 42,
+    "col": 71
+  },
+  {
+    "name": "Illinod",
+    "row": 43,
+    "col": 25
+  },
+  {
+    "name": "Balatea",
+    "row": 48,
+    "col": 39
+  },
+  {
+    "name": "Plagcath",
+    "row": 49,
+    "col": 58
+  },
+  {
+    "name": "Zisbach",
+    "row": 55,
+    "col": 74
+  },
+  {
+    "name": "Hyksos",
+    "row": 59,
+    "col": 7
+  },
+  {
+    "name": "Adee",
+    "row": 60,
+    "col": 26
+  },
+  {
+    "name": "Vister",
+    "row": 61,
+    "col": 43
+  },
+  {
+    "name": "Netgrove",
+    "row": 66,
+    "col": 60
+  },
+  {
+    "name": "Raigor",
+    "row": 69,
+    "col": 9
+  },
+  {
+    "name": "Lorbin",
+    "row": 70,
+    "col": 38
+  },
+  {
+    "name": "Echule",
+    "row": 72,
+    "col": 74
+  },
+  {
+    "name": "Pavv",
+    "row": 74,
+    "col": 20
+  }
+]

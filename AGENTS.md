@@ -48,7 +48,7 @@ implementation in what the C actually does.
 
 ## Tech stack and conventions
 
-- **Module:** `github.com/playbymail/olyg6`
+- **Module:** `github.com/mdhender/olyg6`
 - **Go:** 1.26.x (see `go.mod`)
 - **CLI / flags:** use `github.com/peterbourgon/ff/v4` — **not** Cobra.
 - **Versioning:** use `github.com/maloquacious/semver`.
