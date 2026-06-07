@@ -1,0 +1,16 @@
+*~
+*.exe
+*.gz
+*.swp
+*.tar
+*.tgz
+
+.DS_Store
+.idea/
+
+# ignore command build files that the AI likes to drop, but not the command folders
+mapgen
+!mapgen/
+oly-g6
+!oly-g6/
+
