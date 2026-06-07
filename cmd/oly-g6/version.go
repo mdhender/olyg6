@@ -11,7 +11,7 @@ import (
 )
 
 // versionCmd creates the "version" subcommand, which prints the engine's
-// semantic version (major.minor.patch).
+// semantic version including any pre-release marker (e.g. 0.1.1-alpha).
 func versionCmd(parentFlags *ff.FlagSet) *ff.Command {
 	versionFlags := ff.NewFlagSet("version").SetParent(parentFlags)
 	return &ff.Command{
@@ -19,7 +19,7 @@ func versionCmd(parentFlags *ff.FlagSet) *ff.Command {
 		Usage: "oly-g6 version",
 		Flags: versionFlags,
 		Exec: func(context.Context, []string) error {
-			fmt.Println(olyg6.Version().Core())
+			fmt.Println(olyg6.Version().Short())
 			return nil
 		},
 	}
