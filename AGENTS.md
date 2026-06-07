@@ -123,16 +123,25 @@ T_unform=12, T_lore=13`.
 
 Golden files live under `testdata/golden/` (the Go toolchain ignores any
 `testdata` directory, so nothing there is compiled). See
-`testdata/golden/README.md` for the full convention. In short:
+`testdata/golden/README.md` for the full convention. In short, each case lives
+in `testdata/golden/cases/<name>/` and is one of two shapes:
 
-- Each case is `testdata/golden/cases/<name>/` and mirrors the original G3
-  on-disk layout, holding both the original flat-file `lib/` and the expected
-  olyg6 `json/` store for the same world.
-- Test converters in both directions plus round-trip:
-  `lib/` -> JSON (compare `json/`), `json/` -> flat (compare `lib/`), and
-  JSON -> flat -> JSON (lossless).
-- Keep fixtures small and read-only; record provenance (source snapshot, turn,
-  RNG seeds) in each case's `PROVENANCE.md`. Outcomes depend on seeds.
+- **Converter cases** mirror the original G3 on-disk layout, holding both the
+  original flat-file `lib/` and the expected olyg6 `json/` store for the same
+  world (e.g. `g3-world`). Used to test the flat ⇄ JSON converters in both
+  directions plus round-trip: `lib/` -> JSON (compare `json/`), `json/` -> flat
+  (compare `lib/`), and JSON -> flat -> JSON (lossless).
+- **Generator cases** hold inputs in `fixtures/` and expected outputs in
+  `golden/` — and `golden/` may carry both flat and JSON goldens for the same
+  world (e.g. `mapgen`, `lists`). Used to lock a generator/algorithm's output
+  against a known-good result. When that result was produced by the reference C,
+  keep the generator in the case dir (e.g. `lists/harness.c`).
+
+Rules common to both:
+
+- Keep fixtures small and read-only; record provenance — source snapshot, game
+  turn, RNG seeds, and regeneration steps — in each case's `PROVENANCE.md`.
+  Outcomes depend on seeds.
 - Never edit a golden file just to make a test pass. Regenerate goldens
   deliberately and review the diff when behavior legitimately changes.
 

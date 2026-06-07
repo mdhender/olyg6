@@ -1,6 +1,7 @@
-# lists golden case
+# lists
 
-Parity fixtures for `pkg/lists` `Shuffle` (a port of the G3 `ilist_shuffle`).
+Generator case for `pkg/lists` `Shuffle` (a port of the G3 `ilist_shuffle`):
+the shuffle ordering is locked against the reference C output for a fixed seed.
 
 - `fixtures/seed` — 16-byte RNG seed/state (bytes `0x01..0x10`).
 - `golden/shuffle-50` — the ordering the **reference C** `ilist_shuffle`
