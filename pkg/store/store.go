@@ -40,6 +40,13 @@ type ProvDest struct {
 	W int `json:"w"`
 }
 
+// RandSeed is the system RNG seed/state. The 16-byte state is stored as a
+// lowercase hex string (32 chars) — fixed-length, range-safe, and round-trips
+// exactly, unlike a slice of ints.
+type RandSeed struct {
+	Seed string `json:"seed"`
+}
+
 // Gate is a "gate" entity: a one-way teleport from its containing location
 // (Where) to a destination location (ToLoc).
 type Gate struct {

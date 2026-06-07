@@ -3,6 +3,7 @@ package mapgen_test
 import (
 	"bufio"
 	"bytes"
+	"encoding/hex"
 	"encoding/json"
 	"io"
 	"os"
@@ -117,7 +118,7 @@ func TestJSONStoreConsistency(t *testing.T) {
 // creation; the test guards against accidental drift.
 func TestJSONStoreGolden(t *testing.T) {
 	tmp := generateIntoTemp(t)
-	for _, name := range []string{"loc.json", "gate.json", "road.json"} {
+	for _, name := range []string{"loc.json", "gate.json", "road.json", "randseed.json"} {
 		got, err := os.ReadFile(filepath.Join(tmp, name))
 		if err != nil {
 			t.Fatalf("read %s: %v", name, err)
@@ -129,6 +130,78 @@ func TestJSONStoreGolden(t *testing.T) {
 		if !bytes.Equal(got, want) {
 			t.Errorf("%s: output does not match golden (got %d bytes, want %d bytes)",
 				name, len(got), len(want))
+		}
+	}
+}
+
+// TestRandSeedJSON checks that randseed.json's hex string decodes to exactly
+// the bytes in the flat randseed file.
+func TestRandSeedJSON(t *testing.T) {
+	tmp := generateIntoTemp(t)
+
+	var seed store.RandSeed
+	readJSON(t, filepath.Join(tmp, "randseed.json"), &seed)
+	got, err := hex.DecodeString(seed.Seed)
+	if err != nil {
+		t.Fatalf("decode seed hex %q: %v", seed.Seed, err)
+	}
+
+	want, err := os.ReadFile(filepath.Join(tmp, "randseed"))
+	if err != nil {
+		t.Fatalf("read flat randseed: %v", err)
+	}
+	if !bytes.Equal(got, want) {
+		t.Errorf("randseed.json decodes to %x, flat randseed is %x", got, want)
+	}
+}
+
+// TestSeedInputParity proves that loading the seed from randseed.json (hex)
+// produces byte-identical output to loading the legacy binary randseed.
+func TestSeedInputParity(t *testing.T) {
+	// Reference run: binary seed (the default input name).
+	binDir := generateIntoTemp(t)
+
+	// JSON-seed run: same world, but the seed supplied as randseed.json.
+	jsonDir := t.TempDir()
+	for _, name := range []string{"ascii-map.txt", "cities.txt", "lands.json", "regions.json"} {
+		data, err := os.ReadFile(filepath.Join(fixturesDir, name))
+		if err != nil {
+			t.Fatalf("read fixture %s: %v", name, err)
+		}
+		if err := os.WriteFile(filepath.Join(jsonDir, name), data, 0644); err != nil {
+			t.Fatalf("write fixture %s: %v", name, err)
+		}
+	}
+	seedBytes, err := os.ReadFile(filepath.Join(fixturesDir, "randseed"))
+	if err != nil {
+		t.Fatalf("read fixture randseed: %v", err)
+	}
+	seedJSON, err := json.MarshalIndent(store.RandSeed{Seed: hex.EncodeToString(seedBytes)}, "", "  ")
+	if err != nil {
+		t.Fatalf("marshal seed: %v", err)
+	}
+	if err := os.WriteFile(filepath.Join(jsonDir, "randseed.json"), seedJSON, 0644); err != nil {
+		t.Fatalf("write randseed.json: %v", err)
+	}
+
+	g := mapgen.New(mapgen.Options{
+		InputDir: jsonDir, OutputDir: jsonDir, InputSeed: "randseed.json", Log: io.Discard,
+	})
+	if err := g.Run(); err != nil {
+		t.Fatalf("Run with json seed: %v", err)
+	}
+
+	for _, name := range []string{"loc", "gate", "road", "randseed", "loc.json", "gate.json", "road.json", "randseed.json"} {
+		a, err := os.ReadFile(filepath.Join(binDir, name))
+		if err != nil {
+			t.Fatalf("read %s (bin): %v", name, err)
+		}
+		b, err := os.ReadFile(filepath.Join(jsonDir, name))
+		if err != nil {
+			t.Fatalf("read %s (json): %v", name, err)
+		}
+		if !bytes.Equal(a, b) {
+			t.Errorf("%s differs between binary-seed and json-seed runs", name)
 		}
 	}
 }

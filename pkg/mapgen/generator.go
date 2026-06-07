@@ -150,7 +150,7 @@ func (g *Generator) outPath(name string) string { return filepath.Join(g.OutputD
 func (g *Generator) Run() error {
 	g.dirAssert()
 
-	if err := g.RNG.LoadSeed(g.inPath(g.InputSeed)); err != nil {
+	if err := g.loadSeed(); err != nil {
 		g.logf("%s could not be opened.\n", g.inPath(g.InputSeed))
 		return err
 	}
@@ -214,7 +214,10 @@ func (g *Generator) Run() error {
 	g.countTiles()
 	g.logf("\nhighest province = %d\n\n", g.Map[g.MaxRowUsed][g.MaxColUsed].Region)
 
-	return g.RNG.SaveSeed(g.outPath("randseed"))
+	if err := g.RNG.SaveSeed(g.outPath("randseed")); err != nil {
+		return err
+	}
+	return g.writeSeedJSON()
 }
 
 func (g *Generator) writeFile(name string, data []byte) error {
