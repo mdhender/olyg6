@@ -11,10 +11,8 @@ import (
 	"github.com/peterbourgon/ff/v4"
 )
 
-// generateMap is a stub for the "generate map" subcommand.
+// generateMap runs the "generate map" subcommand.
 func generateMap(_ context.Context, cfg generateMapConfig) error {
-	// TODO: wire this up to pkg/mapgen.
-
 	g := mapgen.New(mapgen.Options{
 		InputDir:     cfg.inputPath,
 		InputCities:  cfg.cities,

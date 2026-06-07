@@ -3,6 +3,7 @@
 // It is organized as a tree of commands. It implements:
 //
 //	oly-g6 generate map   - generate map data files
+//	oly-g6 version         - print the engine version
 package main
 
 import (
@@ -59,6 +60,9 @@ func run(ctx context.Context, args []string) (*ff.Command, error) {
 
 	// map: oly-g6 generate map
 	generateCmd.Subcommands = append(generateCmd.Subcommands, mapCmd(generateFlags))
+
+	// version: oly-g6 version
+	rootCmd.Subcommands = append(rootCmd.Subcommands, versionCmd(rootFlags))
 
 	return rootCmd, rootCmd.ParseAndRun(ctx, args)
 }

@@ -10,11 +10,11 @@ import (
 	"github.com/mdhender/olyg6/pkg/mapgen"
 )
 
-// Test fixtures and golden files live alongside the package, in pkg/tests,
-// so the package is self-contained and the tests need no external paths.
+// Test fixtures and the golden files produced by the original C program live
+// under the shared testdata tree at the module root.
 const (
-	fixturesDir = "../testdata/fixtures"
-	goldenDir   = "../testdata/golden"
+	fixturesDir = "../../testdata/golden/cases/mapgen/fixtures"
+	goldenDir   = "../../testdata/golden/cases/mapgen/golden"
 )
 
 // TestGoldenParity runs the generator against the committed G3 fixtures and
@@ -22,7 +22,9 @@ const (
 // by the original C program byte-for-byte.
 func TestGoldenParity(t *testing.T) {
 	tmp := t.TempDir()
-	for _, name := range []string{"Cities", "Land", "Map", "Regions", "randseed"} {
+	// The fixture filenames match mapgen's default input names, so copying
+	// them into tmp lets the generator find them with no extra configuration.
+	for _, name := range []string{"ascii-map.txt", "cities.txt", "lands.json", "regions.json", "randseed"} {
 		data, err := os.ReadFile(filepath.Join(fixturesDir, name))
 		if err != nil {
 			t.Fatalf("read fixture %s: %v", name, err)
@@ -37,7 +39,7 @@ func TestGoldenParity(t *testing.T) {
 		OutputDir: tmp,
 		Log:       io.Discard,
 	})
-	if err := g.Run(true); err != nil {
+	if err := g.Run(); err != nil {
 		t.Fatalf("Run: %v", err)
 	}
 
