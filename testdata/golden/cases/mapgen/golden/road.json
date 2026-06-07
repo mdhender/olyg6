@@ -1,0 +1,1666 @@
+[
+  {
+    "id": 77717,
+    "kind": "road",
+    "name": "Rocky channel",
+    "where": 10114,
+    "to_loc": 10213,
+    "hidden": 1
+  },
+  {
+    "id": 77125,
+    "kind": "road",
+    "name": "Rocky channel",
+    "where": 10213,
+    "to_loc": 10114,
+    "hidden": 1
+  },
+  {
+    "id": 76450,
+    "kind": "road",
+    "name": "Rocky channel",
+    "where": 10706,
+    "to_loc": 10805,
+    "hidden": 1
+  },
+  {
+    "id": 73794,
+    "kind": "road",
+    "name": "Rocky channel",
+    "where": 10805,
+    "to_loc": 10706,
+    "hidden": 1
+  },
+  {
+    "id": 62399,
+    "kind": "road",
+    "name": "Old road",
+    "where": 10967,
+    "to_loc": 61696,
+    "hidden": 1
+  },
+  {
+    "id": 70220,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 11005,
+    "to_loc": 11105,
+    "hidden": 1
+  },
+  {
+    "id": 72894,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 11105,
+    "to_loc": 11005,
+    "hidden": 1
+  },
+  {
+    "id": 77473,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 11135,
+    "to_loc": 74518,
+    "hidden": 1
+  },
+  {
+    "id": 67254,
+    "kind": "road",
+    "name": "Old road",
+    "where": 11175,
+    "to_loc": 65701,
+    "hidden": 1
+  },
+  {
+    "id": 71254,
+    "kind": "road",
+    "name": "Old road",
+    "where": 11432,
+    "to_loc": 68479,
+    "hidden": 1
+  },
+  {
+    "id": 67833,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 11645,
+    "to_loc": 70005,
+    "hidden": 1
+  },
+  {
+    "id": 75238,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 11705,
+    "to_loc": 11806,
+    "hidden": 1
+  },
+  {
+    "id": 74217,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 11708,
+    "to_loc": 11808,
+    "hidden": 1
+  },
+  {
+    "id": 61897,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 11806,
+    "to_loc": 11705,
+    "hidden": 1
+  },
+  {
+    "id": 61491,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 11808,
+    "to_loc": 11708,
+    "hidden": 1
+  },
+  {
+    "id": 64830,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 11843,
+    "to_loc": 68447,
+    "hidden": 1
+  },
+  {
+    "id": 69087,
+    "kind": "road",
+    "name": "Old road",
+    "where": 11970,
+    "to_loc": 74368,
+    "hidden": 1
+  },
+  {
+    "id": 74589,
+    "kind": "road",
+    "name": "Rocky channel",
+    "where": 12362,
+    "to_loc": 12461,
+    "hidden": 1
+  },
+  {
+    "id": 77997,
+    "kind": "road",
+    "name": "Rocky channel",
+    "where": 12461,
+    "to_loc": 12362,
+    "hidden": 1
+  },
+  {
+    "id": 66872,
+    "kind": "road",
+    "name": "Old road",
+    "where": 12463,
+    "to_loc": 12564,
+    "hidden": 1
+  },
+  {
+    "id": 69397,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 12544,
+    "to_loc": 66649,
+    "hidden": 1
+  },
+  {
+    "id": 69703,
+    "kind": "road",
+    "name": "Old road",
+    "where": 12564,
+    "to_loc": 12463,
+    "hidden": 1
+  },
+  {
+    "id": 77066,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 12708,
+    "to_loc": 77739,
+    "hidden": 1
+  },
+  {
+    "id": 75471,
+    "kind": "road",
+    "name": "Rocky channel",
+    "where": 12735,
+    "to_loc": 12835,
+    "hidden": 1
+  },
+  {
+    "id": 64495,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 12805,
+    "to_loc": 12905,
+    "hidden": 1
+  },
+  {
+    "id": 59288,
+    "kind": "road",
+    "name": "Rocky channel",
+    "where": 12835,
+    "to_loc": 12735,
+    "hidden": 1
+  },
+  {
+    "id": 74992,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 12846,
+    "to_loc": 77779,
+    "hidden": 1
+  },
+  {
+    "id": 60970,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 12848,
+    "to_loc": 12948,
+    "hidden": 1
+  },
+  {
+    "id": 64055,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 12852,
+    "to_loc": 12953,
+    "hidden": 1
+  },
+  {
+    "id": 75399,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 12905,
+    "to_loc": 12805,
+    "hidden": 1
+  },
+  {
+    "id": 65634,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 12948,
+    "to_loc": 12848,
+    "hidden": 1
+  },
+  {
+    "id": 76400,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 12953,
+    "to_loc": 12852,
+    "hidden": 1
+  },
+  {
+    "id": 66108,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 13135,
+    "to_loc": 13236,
+    "hidden": 1
+  },
+  {
+    "id": 69512,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 13236,
+    "to_loc": 13135,
+    "hidden": 1
+  },
+  {
+    "id": 75143,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 13519,
+    "to_loc": 70413,
+    "hidden": 1
+  },
+  {
+    "id": 75178,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 13802,
+    "to_loc": 13901,
+    "hidden": 1
+  },
+  {
+    "id": 69014,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 13834,
+    "to_loc": 67957,
+    "hidden": 1
+  },
+  {
+    "id": 74684,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 13901,
+    "to_loc": 13802,
+    "hidden": 1
+  },
+  {
+    "id": 73470,
+    "kind": "road",
+    "name": "Old road",
+    "where": 13905,
+    "to_loc": 67518,
+    "hidden": 1
+  },
+  {
+    "id": 71802,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 13913,
+    "to_loc": 71119,
+    "hidden": 1
+  },
+  {
+    "id": 59048,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 13946,
+    "to_loc": 70629,
+    "hidden": 1
+  },
+  {
+    "id": 78040,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 14065,
+    "to_loc": 14066,
+    "hidden": 1
+  },
+  {
+    "id": 67391,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 14066,
+    "to_loc": 14065,
+    "hidden": 1
+  },
+  {
+    "id": 69607,
+    "kind": "road",
+    "name": "Rocky channel",
+    "where": 14264,
+    "to_loc": 14265,
+    "hidden": 1
+  },
+  {
+    "id": 64699,
+    "kind": "road",
+    "name": "Rocky channel",
+    "where": 14265,
+    "to_loc": 14264,
+    "hidden": 1
+  },
+  {
+    "id": 66407,
+    "kind": "road",
+    "name": "Secret sea route",
+    "where": 14320,
+    "to_loc": 14420,
+    "hidden": 1
+  },
+  {
+    "id": 75289,
+    "kind": "road",
+    "name": "Secret sea route",
+    "where": 14420,
+    "to_loc": 14320,
+    "hidden": 1
+  },
+  {
+    "id": 77714,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 14541,
+    "to_loc": 66601,
+    "hidden": 1
+  },
+  {
+    "id": 62520,
+    "kind": "road",
+    "name": "Old road",
+    "where": 14610,
+    "to_loc": 71008,
+    "hidden": 1
+  },
+  {
+    "id": 76445,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 15209,
+    "to_loc": 15310,
+    "hidden": 1
+  },
+  {
+    "id": 72015,
+    "kind": "road",
+    "name": "Rocky channel",
+    "where": 15223,
+    "to_loc": 15324,
+    "hidden": 1
+  },
+  {
+    "id": 62114,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 15262,
+    "to_loc": 75219,
+    "hidden": 1
+  },
+  {
+    "id": 77887,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 15310,
+    "to_loc": 15209,
+    "hidden": 1
+  },
+  {
+    "id": 63485,
+    "kind": "road",
+    "name": "Rocky channel",
+    "where": 15324,
+    "to_loc": 15223,
+    "hidden": 1
+  },
+  {
+    "id": 64606,
+    "kind": "road",
+    "name": "Old road",
+    "where": 15542,
+    "to_loc": 15641,
+    "hidden": 1
+  },
+  {
+    "id": 76825,
+    "kind": "road",
+    "name": "Old road",
+    "where": 15641,
+    "to_loc": 15542,
+    "hidden": 1
+  },
+  {
+    "id": 61203,
+    "kind": "road",
+    "name": "Secret sea route",
+    "where": 15641,
+    "to_loc": 15642,
+    "hidden": 1
+  },
+  {
+    "id": 59452,
+    "kind": "road",
+    "name": "Secret sea route",
+    "where": 15642,
+    "to_loc": 15641,
+    "hidden": 1
+  },
+  {
+    "id": 73904,
+    "kind": "road",
+    "name": "Secret sea route",
+    "where": 15651,
+    "to_loc": 15752,
+    "hidden": 1
+  },
+  {
+    "id": 65811,
+    "kind": "road",
+    "name": "Secret sea route",
+    "where": 15752,
+    "to_loc": 15651,
+    "hidden": 1
+  },
+  {
+    "id": 71640,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 15767,
+    "to_loc": 65269,
+    "hidden": 1
+  },
+  {
+    "id": 64839,
+    "kind": "road",
+    "name": "Old road",
+    "where": 16017,
+    "to_loc": 65182,
+    "hidden": 1
+  },
+  {
+    "id": 72378,
+    "kind": "road",
+    "name": "Old road",
+    "where": 16324,
+    "to_loc": 62139,
+    "hidden": 1
+  },
+  {
+    "id": 69393,
+    "kind": "road",
+    "name": "Secret sea route",
+    "where": 16505,
+    "to_loc": 16606,
+    "hidden": 1
+  },
+  {
+    "id": 65922,
+    "kind": "road",
+    "name": "Secret sea route",
+    "where": 16606,
+    "to_loc": 16505,
+    "hidden": 1
+  },
+  {
+    "id": 60030,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 16628,
+    "to_loc": 16728,
+    "hidden": 1
+  },
+  {
+    "id": 61073,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 16674,
+    "to_loc": 16773,
+    "hidden": 1
+  },
+  {
+    "id": 67694,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 16711,
+    "to_loc": 65136,
+    "hidden": 1
+  },
+  {
+    "id": 72338,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 16728,
+    "to_loc": 16628,
+    "hidden": 1
+  },
+  {
+    "id": 69419,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 16773,
+    "to_loc": 16674,
+    "hidden": 1
+  },
+  {
+    "id": 59530,
+    "kind": "road",
+    "name": "Rocky channel",
+    "where": 16802,
+    "to_loc": 16903,
+    "hidden": 1
+  },
+  {
+    "id": 61775,
+    "kind": "road",
+    "name": "Rocky channel",
+    "where": 16803,
+    "to_loc": 16904,
+    "hidden": 1
+  },
+  {
+    "id": 59099,
+    "kind": "road",
+    "name": "Rocky channel",
+    "where": 16903,
+    "to_loc": 16802,
+    "hidden": 1
+  },
+  {
+    "id": 64674,
+    "kind": "road",
+    "name": "Rocky channel",
+    "where": 16904,
+    "to_loc": 16803,
+    "hidden": 1
+  },
+  {
+    "id": 77082,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 17069,
+    "to_loc": 17168,
+    "hidden": 1
+  },
+  {
+    "id": 69167,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 17154,
+    "to_loc": 17255,
+    "hidden": 1
+  },
+  {
+    "id": 66478,
+    "kind": "road",
+    "name": "Narrow channel",
+    "where": 17168,
+    "to_loc": 17069,
+    "hidden": 1
+  },
+  {
+    "id": 59272,
+    "kind": "road",
+    "name": "Rocky channel",
+    "where": 17234,
+    "to_loc": 17334,
+    "hidden": 1
+  },
+  {
+    "id": 68165,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 17255,
+    "to_loc": 17154,
+    "hidden": 1
+  },
+  {
+    "id": 60349,
+    "kind": "road",
+    "name": "Rocky channel",
+    "where": 17334,
+    "to_loc": 17234,
+    "hidden": 1
+  },
+  {
+    "id": 59690,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 65870,
+    "to_loc": 75913,
+    "hidden": 1
+  },
+  {
+    "id": 68899,
+    "kind": "road",
+    "name": "Old road",
+    "where": 68479,
+    "to_loc": 11432,
+    "hidden": 1
+  },
+  {
+    "id": 71763,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 61331,
+    "to_loc": 77985,
+    "hidden": 1
+  },
+  {
+    "id": 72311,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 73485,
+    "to_loc": 66452,
+    "hidden": 1
+  },
+  {
+    "id": 66972,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 60633,
+    "to_loc": 72990,
+    "hidden": 1
+  },
+  {
+    "id": 76679,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 68930,
+    "to_loc": 62002,
+    "hidden": 1
+  },
+  {
+    "id": 63446,
+    "kind": "road",
+    "name": "Old road",
+    "where": 70404,
+    "to_loc": 71739,
+    "hidden": 1
+  },
+  {
+    "id": 62788,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 69327,
+    "to_loc": 61975,
+    "hidden": 1
+  },
+  {
+    "id": 68248,
+    "kind": "road",
+    "name": "Old road",
+    "where": 74402,
+    "to_loc": 77247,
+    "hidden": 1
+  },
+  {
+    "id": 60615,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 66601,
+    "to_loc": 14541,
+    "hidden": 1
+  },
+  {
+    "id": 71015,
+    "kind": "road",
+    "name": "Old road",
+    "where": 62139,
+    "to_loc": 16324,
+    "hidden": 1
+  },
+  {
+    "id": 74626,
+    "kind": "road",
+    "name": "Old road",
+    "where": 62149,
+    "to_loc": 77672,
+    "hidden": 1
+  },
+  {
+    "id": 68836,
+    "kind": "road",
+    "name": "Old road",
+    "where": 71170,
+    "to_loc": 71399,
+    "hidden": 1
+  },
+  {
+    "id": 74028,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 68217,
+    "to_loc": 67353,
+    "hidden": 1
+  },
+  {
+    "id": 70159,
+    "kind": "road",
+    "name": "Old road",
+    "where": 69104,
+    "to_loc": 59828,
+    "hidden": 1
+  },
+  {
+    "id": 75508,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 65136,
+    "to_loc": 16711,
+    "hidden": 1
+  },
+  {
+    "id": 78165,
+    "kind": "road",
+    "name": "Old road",
+    "where": 78491,
+    "to_loc": 71313,
+    "hidden": 1
+  },
+  {
+    "id": 61896,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 70970,
+    "to_loc": 67192,
+    "hidden": 1
+  },
+  {
+    "id": 59916,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 59664,
+    "to_loc": 65781,
+    "hidden": 1
+  },
+  {
+    "id": 67715,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 75847,
+    "to_loc": 64979,
+    "hidden": 1
+  },
+  {
+    "id": 69061,
+    "kind": "road",
+    "name": "Old road",
+    "where": 62746,
+    "to_loc": 69706,
+    "hidden": 1
+  },
+  {
+    "id": 74924,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 66649,
+    "to_loc": 12544,
+    "hidden": 1
+  },
+  {
+    "id": 72677,
+    "kind": "road",
+    "name": "Old road",
+    "where": 65182,
+    "to_loc": 16017,
+    "hidden": 1
+  },
+  {
+    "id": 60661,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 78443,
+    "to_loc": 70193,
+    "hidden": 1
+  },
+  {
+    "id": 65674,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 70629,
+    "to_loc": 13946,
+    "hidden": 1
+  },
+  {
+    "id": 64630,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 78087,
+    "to_loc": 69757,
+    "hidden": 1
+  },
+  {
+    "id": 71922,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 77985,
+    "to_loc": 61331,
+    "hidden": 1
+  },
+  {
+    "id": 68604,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 73825,
+    "to_loc": 68634,
+    "hidden": 1
+  },
+  {
+    "id": 70088,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 61140,
+    "to_loc": 59641,
+    "hidden": 1
+  },
+  {
+    "id": 75638,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 70413,
+    "to_loc": 13519,
+    "hidden": 1
+  },
+  {
+    "id": 69783,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 70414,
+    "to_loc": 68575,
+    "hidden": 1
+  },
+  {
+    "id": 69724,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 76747,
+    "to_loc": 69201,
+    "hidden": 1
+  },
+  {
+    "id": 59568,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 70193,
+    "to_loc": 78443,
+    "hidden": 1
+  },
+  {
+    "id": 78554,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 73680,
+    "to_loc": 62958,
+    "hidden": 1
+  },
+  {
+    "id": 65937,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 69201,
+    "to_loc": 76747,
+    "hidden": 1
+  },
+  {
+    "id": 78398,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 63165,
+    "to_loc": 62802,
+    "hidden": 1
+  },
+  {
+    "id": 78415,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 62002,
+    "to_loc": 68930,
+    "hidden": 1
+  },
+  {
+    "id": 64270,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 68634,
+    "to_loc": 73825,
+    "hidden": 1
+  },
+  {
+    "id": 75984,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 71119,
+    "to_loc": 13913,
+    "hidden": 1
+  },
+  {
+    "id": 73486,
+    "kind": "road",
+    "name": "Old road",
+    "where": 71008,
+    "to_loc": 14610,
+    "hidden": 1
+  },
+  {
+    "id": 73949,
+    "kind": "road",
+    "name": "Old road",
+    "where": 71809,
+    "to_loc": 72307,
+    "hidden": 1
+  },
+  {
+    "id": 69396,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 68447,
+    "to_loc": 11843,
+    "hidden": 1
+  },
+  {
+    "id": 59404,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 62802,
+    "to_loc": 63165,
+    "hidden": 1
+  },
+  {
+    "id": 74469,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 73710,
+    "to_loc": 67499,
+    "hidden": 1
+  },
+  {
+    "id": 61720,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 65781,
+    "to_loc": 59664,
+    "hidden": 1
+  },
+  {
+    "id": 67071,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 59641,
+    "to_loc": 61140,
+    "hidden": 1
+  },
+  {
+    "id": 71761,
+    "kind": "road",
+    "name": "Old road",
+    "where": 77672,
+    "to_loc": 62149,
+    "hidden": 1
+  },
+  {
+    "id": 59982,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 77779,
+    "to_loc": 12846,
+    "hidden": 1
+  },
+  {
+    "id": 70263,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 61072,
+    "to_loc": 71699,
+    "hidden": 1
+  },
+  {
+    "id": 71493,
+    "kind": "road",
+    "name": "Old road",
+    "where": 71739,
+    "to_loc": 70404,
+    "hidden": 1
+  },
+  {
+    "id": 73146,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 65269,
+    "to_loc": 15767,
+    "hidden": 1
+  },
+  {
+    "id": 77749,
+    "kind": "road",
+    "name": "Old road",
+    "where": 68773,
+    "to_loc": 65496,
+    "hidden": 1
+  },
+  {
+    "id": 67538,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 76480,
+    "to_loc": 65528,
+    "hidden": 1
+  },
+  {
+    "id": 63959,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 67353,
+    "to_loc": 68217,
+    "hidden": 1
+  },
+  {
+    "id": 77516,
+    "kind": "road",
+    "name": "Old road",
+    "where": 72854,
+    "to_loc": 61279,
+    "hidden": 1
+  },
+  {
+    "id": 71402,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 67098,
+    "to_loc": 72494,
+    "hidden": 1
+  },
+  {
+    "id": 65720,
+    "kind": "road",
+    "name": "Old road",
+    "where": 74806,
+    "to_loc": 63852,
+    "hidden": 1
+  },
+  {
+    "id": 77618,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 66452,
+    "to_loc": 73485,
+    "hidden": 1
+  },
+  {
+    "id": 63074,
+    "kind": "road",
+    "name": "Old road",
+    "where": 62264,
+    "to_loc": 67963,
+    "hidden": 1
+  },
+  {
+    "id": 70992,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 68205,
+    "to_loc": 60185,
+    "hidden": 1
+  },
+  {
+    "id": 62877,
+    "kind": "road",
+    "name": "Old road",
+    "where": 61279,
+    "to_loc": 72854,
+    "hidden": 1
+  },
+  {
+    "id": 71538,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 77968,
+    "to_loc": 59687,
+    "hidden": 1
+  },
+  {
+    "id": 63288,
+    "kind": "road",
+    "name": "Old road",
+    "where": 67963,
+    "to_loc": 62264,
+    "hidden": 1
+  },
+  {
+    "id": 65613,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 72845,
+    "to_loc": 66275,
+    "hidden": 1
+  },
+  {
+    "id": 66907,
+    "kind": "road",
+    "name": "Old road",
+    "where": 68655,
+    "to_loc": 75043,
+    "hidden": 1
+  },
+  {
+    "id": 67920,
+    "kind": "road",
+    "name": "Old road",
+    "where": 72370,
+    "to_loc": 77264,
+    "hidden": 1
+  },
+  {
+    "id": 62312,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 68575,
+    "to_loc": 70414,
+    "hidden": 1
+  },
+  {
+    "id": 68911,
+    "kind": "road",
+    "name": "Old road",
+    "where": 77264,
+    "to_loc": 72370,
+    "hidden": 1
+  },
+  {
+    "id": 73734,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 64979,
+    "to_loc": 75847,
+    "hidden": 1
+  },
+  {
+    "id": 66730,
+    "kind": "road",
+    "name": "Old road",
+    "where": 61696,
+    "to_loc": 10967,
+    "hidden": 1
+  },
+  {
+    "id": 60266,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 74786,
+    "to_loc": 59832,
+    "hidden": 1
+  },
+  {
+    "id": 66594,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 62958,
+    "to_loc": 73680,
+    "hidden": 1
+  },
+  {
+    "id": 68737,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 59832,
+    "to_loc": 74786,
+    "hidden": 1
+  },
+  {
+    "id": 62839,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 68261,
+    "to_loc": 69203,
+    "hidden": 1
+  },
+  {
+    "id": 59902,
+    "kind": "road",
+    "name": "Old road",
+    "where": 74368,
+    "to_loc": 11970,
+    "hidden": 1
+  },
+  {
+    "id": 59961,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 59944,
+    "to_loc": 76970,
+    "hidden": 1
+  },
+  {
+    "id": 59617,
+    "kind": "road",
+    "name": "Old road",
+    "where": 59828,
+    "to_loc": 69104,
+    "hidden": 1
+  },
+  {
+    "id": 76064,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 72494,
+    "to_loc": 67098,
+    "hidden": 1
+  },
+  {
+    "id": 70272,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 74518,
+    "to_loc": 11135,
+    "hidden": 1
+  },
+  {
+    "id": 65955,
+    "kind": "road",
+    "name": "Old road",
+    "where": 70372,
+    "to_loc": 77027,
+    "hidden": 1
+  },
+  {
+    "id": 66443,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 70005,
+    "to_loc": 11645,
+    "hidden": 1
+  },
+  {
+    "id": 76820,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 74004,
+    "to_loc": 63040,
+    "hidden": 1
+  },
+  {
+    "id": 67215,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 67463,
+    "to_loc": 76192,
+    "hidden": 1
+  },
+  {
+    "id": 62557,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 67192,
+    "to_loc": 70970,
+    "hidden": 1
+  },
+  {
+    "id": 77281,
+    "kind": "road",
+    "name": "Old road",
+    "where": 65701,
+    "to_loc": 11175,
+    "hidden": 1
+  },
+  {
+    "id": 61715,
+    "kind": "road",
+    "name": "Old road",
+    "where": 77247,
+    "to_loc": 74402,
+    "hidden": 1
+  },
+  {
+    "id": 63402,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 76970,
+    "to_loc": 59944,
+    "hidden": 1
+  },
+  {
+    "id": 68935,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 69757,
+    "to_loc": 78087,
+    "hidden": 1
+  },
+  {
+    "id": 73499,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 69203,
+    "to_loc": 68261,
+    "hidden": 1
+  },
+  {
+    "id": 67617,
+    "kind": "road",
+    "name": "Old road",
+    "where": 71399,
+    "to_loc": 71170,
+    "hidden": 1
+  },
+  {
+    "id": 76076,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 73883,
+    "to_loc": 66757,
+    "hidden": 1
+  },
+  {
+    "id": 69471,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 67499,
+    "to_loc": 73710,
+    "hidden": 1
+  },
+  {
+    "id": 61247,
+    "kind": "road",
+    "name": "Old road",
+    "where": 62223,
+    "to_loc": 67278,
+    "hidden": 1
+  },
+  {
+    "id": 71946,
+    "kind": "road",
+    "name": "Old road",
+    "where": 72307,
+    "to_loc": 71809,
+    "hidden": 1
+  },
+  {
+    "id": 59231,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 60185,
+    "to_loc": 68205,
+    "hidden": 1
+  },
+  {
+    "id": 75874,
+    "kind": "road",
+    "name": "Old road",
+    "where": 75043,
+    "to_loc": 68655,
+    "hidden": 1
+  },
+  {
+    "id": 61681,
+    "kind": "road",
+    "name": "Old road",
+    "where": 71313,
+    "to_loc": 78491,
+    "hidden": 1
+  },
+  {
+    "id": 67239,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 63164,
+    "to_loc": 64823,
+    "hidden": 1
+  },
+  {
+    "id": 60433,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 70007,
+    "to_loc": 69810,
+    "hidden": 1
+  },
+  {
+    "id": 62301,
+    "kind": "road",
+    "name": "Old road",
+    "where": 63852,
+    "to_loc": 74806,
+    "hidden": 1
+  },
+  {
+    "id": 70029,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 62618,
+    "to_loc": 75322,
+    "hidden": 1
+  },
+  {
+    "id": 74075,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 63040,
+    "to_loc": 74004,
+    "hidden": 1
+  },
+  {
+    "id": 59592,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 69810,
+    "to_loc": 70007,
+    "hidden": 1
+  },
+  {
+    "id": 78727,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 66275,
+    "to_loc": 72845,
+    "hidden": 1
+  },
+  {
+    "id": 70848,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 77073,
+    "to_loc": 60195,
+    "hidden": 1
+  },
+  {
+    "id": 78233,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 75219,
+    "to_loc": 15262,
+    "hidden": 1
+  },
+  {
+    "id": 72726,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 71699,
+    "to_loc": 61072,
+    "hidden": 1
+  },
+  {
+    "id": 64346,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 60195,
+    "to_loc": 77073,
+    "hidden": 1
+  },
+  {
+    "id": 71050,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 75913,
+    "to_loc": 65870,
+    "hidden": 1
+  },
+  {
+    "id": 71580,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 61975,
+    "to_loc": 69327,
+    "hidden": 1
+  },
+  {
+    "id": 70845,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 64823,
+    "to_loc": 63164,
+    "hidden": 1
+  },
+  {
+    "id": 59825,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 75322,
+    "to_loc": 62618,
+    "hidden": 1
+  },
+  {
+    "id": 62806,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 59687,
+    "to_loc": 77968,
+    "hidden": 1
+  },
+  {
+    "id": 73900,
+    "kind": "road",
+    "name": "Old road",
+    "where": 69706,
+    "to_loc": 62746,
+    "hidden": 1
+  },
+  {
+    "id": 68031,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 62187,
+    "to_loc": 67952,
+    "hidden": 1
+  },
+  {
+    "id": 69631,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 69367,
+    "to_loc": 75246,
+    "hidden": 1
+  },
+  {
+    "id": 74056,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 72990,
+    "to_loc": 60633,
+    "hidden": 1
+  },
+  {
+    "id": 68713,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 77739,
+    "to_loc": 12708,
+    "hidden": 1
+  },
+  {
+    "id": 77961,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 65528,
+    "to_loc": 76480,
+    "hidden": 1
+  },
+  {
+    "id": 70541,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 76192,
+    "to_loc": 67463,
+    "hidden": 1
+  },
+  {
+    "id": 68539,
+    "kind": "road",
+    "name": "Old road",
+    "where": 67278,
+    "to_loc": 62223,
+    "hidden": 1
+  },
+  {
+    "id": 75136,
+    "kind": "road",
+    "name": "Old road",
+    "where": 65496,
+    "to_loc": 68773,
+    "hidden": 1
+  },
+  {
+    "id": 75543,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 67952,
+    "to_loc": 62187,
+    "hidden": 1
+  },
+  {
+    "id": 72482,
+    "kind": "road",
+    "name": "Secret pass",
+    "where": 67957,
+    "to_loc": 13834,
+    "hidden": 1
+  },
+  {
+    "id": 70277,
+    "kind": "road",
+    "name": "Old road",
+    "where": 67518,
+    "to_loc": 13905,
+    "hidden": 1
+  },
+  {
+    "id": 71005,
+    "kind": "road",
+    "name": "Old road",
+    "where": 77027,
+    "to_loc": 70372,
+    "hidden": 1
+  },
+  {
+    "id": 65683,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 75246,
+    "to_loc": 69367,
+    "hidden": 1
+  },
+  {
+    "id": 64184,
+    "kind": "road",
+    "name": "Secret route",
+    "where": 66757,
+    "to_loc": 73883,
+    "hidden": 1
+  }
+]

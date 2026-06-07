@@ -204,6 +204,13 @@ func (g *Generator) Run() error {
 		return err
 	}
 
+	// Additionally emit the G6 native JSON store (loc.json, gate.json,
+	// road.json). This carries the same entities as the flat files above;
+	// the flat output is unchanged so golden parity still holds.
+	if err := g.writeJSON(); err != nil {
+		return err
+	}
+
 	g.countTiles()
 	g.logf("\nhighest province = %d\n\n", g.Map[g.MaxRowUsed][g.MaxColUsed].Region)
 
