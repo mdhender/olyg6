@@ -10,6 +10,15 @@ This note records the gaps so the old README isn't mistaken for how our
 generator behaves. "Our generator" below means `oly-g6 generate map`
 (`pkg/mapgen`); the glyph handling lives in `readMap` (`pkg/mapgen/generator.go`).
 
+The README isn't pure fiction: an **earlier** generator, `g3/mapgen/old.c`,
+**partially implements the version it describes**. `old.c` reads the 1.0 glyph
+dialect (`@` mountain, `!` swamp, `;`/`%` desert, an active `?` hidden province)
+and implements the two-letter region-naming scheme — lowercase codes for oceans,
+uppercase for land, indexed against a `Regions` file (`inside_code[]`). The
+shipping `mapgen.c` later replaced that dialect and the in-map codes with the
+current glyphs and the regions/lands data files; `oly-g6 generate map` ports
+`mapgen.c`, not `old.c`.
+
 ## Missing and conflicting glyphs
 
 "Missing" = documented in the 1.0 README but not handled by our generator (an
@@ -21,7 +30,6 @@ unknown glyph makes `readMap` fail with `read_map: unknown terrain`).
 | `@`   | mountain (alt of `^`)                                 | unsupported → unknown-terrain error                            | Missing             |
 | `!`   | swamp (alt of `:`)                                    | unsupported → unknown-terrain error                            | Missing             |
 | `-`   | steppe                                                | unsupported → unknown-terrain error (no steppe terrain exists) | Missing             |
-| `?`   | hidden province (terrain inferred from a neighbor)    | unsupported → unknown-terrain error                            | Missing             |
 | `;`   | desert — *and* "sea lane" (the README lists it twice) | ocean, sea lane (color 1)                                      | Conflict            |
 | `:`   | swamp                                                 | ocean, sea lane (color 2)                                      | Conflict            |
 | `%`   | desert                                                | land province + a scattered (unnamed) city                     | Conflict            |
@@ -30,6 +38,14 @@ unknown glyph makes `readMap` fail with `read_map: unknown terrain`).
 Glyphs that **do** carry over with the documented meaning: the ocean set `~`,
 `.`, `,`, and space; `p`/`P` (plain); `f`/`F` (forest); `#` (impassable
 "hole"); and `*` (marks a named city on land).
+
+**`?` (hidden province) is now implemented.** It was present in `mapgen.c` but
+disabled (`#if 0`); we enabled it following that intended design: `?` marks the
+province hidden and infers its terrain from a random adjacent **definite land**
+terrain via `fixTerrainLand` (it never infers ocean, and adjacent `?`s never
+pick each other, so there is no recursion). A `?` with no definite-terrain
+neighbor falls back to forest. Note this is land-only inference, unlike the
+README's looser "one of the neighboring squares" wording.
 
 Beyond 1.0, our generator also reads many glyphs the README never mentions —
 e.g. `m`/`M` (mountain), `d`/`D` (desert), `s`/`S` (swamp), the extra ocean

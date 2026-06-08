@@ -171,6 +171,9 @@ func (g *Generator) Run() error {
 	if err := g.readMap(); err != nil {
 		return err
 	}
+	if err := g.requireOcean(); err != nil {
+		return err
+	}
 	g.fixTerrainLand()
 	if err := g.setRegions(); err != nil {
 		return err
@@ -220,6 +223,18 @@ func (g *Generator) Run() error {
 
 func (g *Generator) writeFile(name string, data []byte) error {
 	return os.WriteFile(g.outPath(name), data, 0644)
+}
+
+// requireOcean guards against a degenerate, ocean-free map. The generator sizes
+// the island pool as NumIslands = WaterCount/3 and then places islands and gates
+// in ocean; with fewer than 3 ocean provinces NumIslands is 0 and randomIsland
+// would run past the sublocation list and dereference a nil tile (the original
+// C asserts/segfaults the same way). Fail early with a clear message instead.
+func (g *Generator) requireOcean() error {
+	if g.WaterCount < 3 {
+		return fmt.Errorf("mapgen: map has %d ocean province(s); the generator needs at least 3 to place islands", g.WaterCount)
+	}
+	return nil
 }
 
 // ---------------------------------------------------------------------------
@@ -609,6 +624,13 @@ func (g *Generator) readMap() error {
 					terrain = TerrDesert
 				}
 				color = -1
+			case '?':
+				// hidden province: a land placeholder whose terrain is
+				// inferred from a definite-terrain neighbor by fixTerrainLand
+				// (mirrors the disabled C '?' case). Leaving color 0 lets
+				// fixTerrainLand copy the inferred neighbor's color.
+				t.Hidden = 1
+				terrain = TerrLand
 			case '^':
 				color = 9
 				terrain = TerrMountain
