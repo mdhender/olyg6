@@ -61,6 +61,9 @@ func run(ctx context.Context, args []string) (*ff.Command, error) {
 	// map: oly-g6 generate map
 	generateCmd.Subcommands = append(generateCmd.Subcommands, mapCmd(generateFlags))
 
+	// island: oly-g6 generate island
+	generateCmd.Subcommands = append(generateCmd.Subcommands, islandCmd(generateFlags))
+
 	// version: oly-g6 version
 	rootCmd.Subcommands = append(rootCmd.Subcommands, versionCmd(rootFlags))
 
