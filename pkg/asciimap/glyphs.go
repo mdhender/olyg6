@@ -19,6 +19,11 @@ package asciimap
 const (
 	OceanGlyphs   = ",;.: ~'\""
 	SeaLaneGlyphs = ";:~\""
+
+	// PlainOcean is the non-sea-lane ocean glyph for each color, indexed 0..3
+	// (mapgen colors 1..4): ',' '.' ' ' '\''. Generators that 4-color oceans
+	// use these so the output is sea-lane-free.
+	PlainOcean = ",. '"
 )
 
 // IsOcean reports whether b is one of the eight ocean glyphs.

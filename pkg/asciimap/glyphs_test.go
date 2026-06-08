@@ -37,3 +37,18 @@ func TestIsSeaLane(t *testing.T) {
 		}
 	}
 }
+
+func TestPlainOcean(t *testing.T) {
+	if len(asciimap.PlainOcean) != 4 {
+		t.Fatalf("PlainOcean has %d glyphs, want 4", len(asciimap.PlainOcean))
+	}
+	for i := range len(asciimap.PlainOcean) {
+		b := asciimap.PlainOcean[i]
+		if !asciimap.IsOcean(b) {
+			t.Errorf("PlainOcean[%d]=%q is not ocean", i, rune(b))
+		}
+		if asciimap.IsSeaLane(b) {
+			t.Errorf("PlainOcean[%d]=%q is a sea lane", i, rune(b))
+		}
+	}
+}
