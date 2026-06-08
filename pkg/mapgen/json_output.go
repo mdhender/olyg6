@@ -3,41 +3,10 @@
 package mapgen
 
 import (
-	"encoding/hex"
 	"encoding/json"
-	"fmt"
-	"os"
-	"path/filepath"
 
 	"github.com/mdhender/olyg6/pkg/store"
 )
-
-// loadSeed reads the RNG seed from the input seed file, choosing the decoder by
-// file extension: a ".json" file holds the hex-string store form
-// (store.RandSeed); anything else is the legacy raw 16-byte binary file. The
-// binary form is kept for backwards compatibility and will eventually be
-// removed in favor of the JSON store.
-func (g *Generator) loadSeed() error {
-	path := g.inPath(g.InputSeed)
-	if filepath.Ext(path) != ".json" {
-		return g.RNG.LoadSeed(path)
-	}
-
-	data, err := os.ReadFile(path)
-	if err != nil {
-		return err
-	}
-	var rs store.RandSeed
-	if err := json.Unmarshal(data, &rs); err != nil {
-		return fmt.Errorf("%s: %w", path, err)
-	}
-	b, err := hex.DecodeString(rs.Seed)
-	if err != nil {
-		return fmt.Errorf("%s: bad seed hex: %w", path, err)
-	}
-	g.RNG.Load(b)
-	return nil
-}
 
 // writeJSON emits the G6 native JSON store (loc.json, gate.json, road.json)
 // alongside the legacy flat files. It carries exactly the same entity data as
@@ -51,14 +20,6 @@ func (g *Generator) writeJSON() error {
 		return err
 	}
 	return g.writeJSONFile("gate.json", g.buildGates())
-}
-
-// writeSeedJSON emits randseed.json holding the RNG state as a hex string. It
-// is written from the same final state as the flat randseed file.
-func (g *Generator) writeSeedJSON() error {
-	return g.writeJSONFile("randseed.json", store.RandSeed{
-		Seed: hex.EncodeToString(g.RNG.Seed()),
-	})
 }
 
 // writeJSONFile marshals v as indented JSON (matching the input JSON house

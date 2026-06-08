@@ -10,6 +10,7 @@ import (
 	"strings"
 
 	"github.com/mdhender/olyg6/pkg/prng"
+	"github.com/mdhender/olyg6/pkg/store"
 )
 
 // Options configures a Generator.
@@ -150,7 +151,7 @@ func (g *Generator) outPath(name string) string { return filepath.Join(g.OutputD
 func (g *Generator) Run() error {
 	g.dirAssert()
 
-	if err := g.loadSeed(); err != nil {
+	if err := store.LoadSeed(g.RNG, g.inPath(g.InputSeed)); err != nil {
 		g.logf("%s could not be opened.\n", g.inPath(g.InputSeed))
 		return err
 	}
@@ -214,10 +215,7 @@ func (g *Generator) Run() error {
 	g.countTiles()
 	g.logf("\nhighest province = %d\n\n", g.Map[g.MaxRowUsed][g.MaxColUsed].Region)
 
-	if err := g.RNG.SaveSeed(g.outPath("randseed")); err != nil {
-		return err
-	}
-	return g.writeSeedJSON()
+	return store.SaveSeed(g.RNG, g.OutputDir)
 }
 
 func (g *Generator) writeFile(name string, data []byte) error {

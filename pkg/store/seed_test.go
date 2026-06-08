@@ -1,16 +1,16 @@
 // Copyright (c) 2026 Michael D Henderson. All rights reserved.
 
-package mapgen
+package store_test
 
 import (
 	"bytes"
 	"encoding/hex"
-	"io"
 	"os"
 	"path/filepath"
 	"testing"
 
 	"github.com/mdhender/olyg6/pkg/prng"
+	"github.com/mdhender/olyg6/pkg/store"
 )
 
 // TestLoadSeedJSONDecoding locks the randseed.json decode contract, which must
@@ -21,7 +21,7 @@ func TestLoadSeedJSONDecoding(t *testing.T) {
 		name    string
 		hexSeed string
 		wantErr bool
-		want    []byte // expected 16-byte digest when no error
+		want    []byte
 	}{
 		{
 			name:    "exact 16 bytes",
@@ -30,7 +30,7 @@ func TestLoadSeedJSONDecoding(t *testing.T) {
 		},
 		{
 			name:    "short zero-fills",
-			hexSeed: "0102", // 2 bytes -> rest zero
+			hexSeed: "0102",
 			want:    append([]byte{1, 2}, make([]byte, prng.SeedLen-2)...),
 		},
 		{
@@ -53,14 +53,13 @@ func TestLoadSeedJSONDecoding(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			tmp := t.TempDir()
-			body := []byte(`{"seed":"` + tt.hexSeed + `"}`)
-			if err := os.WriteFile(filepath.Join(tmp, "randseed.json"), body, 0644); err != nil {
+			path := filepath.Join(tmp, "randseed.json")
+			if err := os.WriteFile(path, []byte(`{"seed":"`+tt.hexSeed+`"}`), 0644); err != nil {
 				t.Fatalf("write: %v", err)
 			}
 
-			g := New(Options{InputDir: tmp, InputSeed: "randseed.json", Log: io.Discard})
-			err := g.loadSeed()
-
+			rng := prng.NewRNG()
+			err := store.LoadSeed(rng, path)
 			if tt.wantErr {
 				if err == nil {
 					t.Fatalf("expected error for %q, got nil", tt.hexSeed)
@@ -70,7 +69,7 @@ func TestLoadSeedJSONDecoding(t *testing.T) {
 			if err != nil {
 				t.Fatalf("unexpected error: %v", err)
 			}
-			if got := g.RNG.Seed(); !bytes.Equal(got, tt.want) {
+			if got := rng.Seed(); !bytes.Equal(got, tt.want) {
 				t.Errorf("digest = %x, want %x", got, tt.want)
 			}
 		})
@@ -78,7 +77,7 @@ func TestLoadSeedJSONDecoding(t *testing.T) {
 }
 
 // TestLoadSeedBinaryMatchesJSON confirms the binary and JSON paths produce the
-// same RNG state for the same 16 bytes (they share prng.Load).
+// same RNG state for the same 16 bytes.
 func TestLoadSeedBinaryMatchesJSON(t *testing.T) {
 	raw := []byte{9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 0xaa, 0xbb, 0xcc, 0xdd, 0xee, 0xff}
 	tmp := t.TempDir()
@@ -89,15 +88,37 @@ func TestLoadSeedBinaryMatchesJSON(t *testing.T) {
 		t.Fatalf("write json: %v", err)
 	}
 
-	gb := New(Options{InputDir: tmp, InputSeed: "randseed", Log: io.Discard})
-	if err := gb.loadSeed(); err != nil {
-		t.Fatalf("binary loadSeed: %v", err)
+	rb := prng.NewRNG()
+	if err := store.LoadSeed(rb, filepath.Join(tmp, "randseed")); err != nil {
+		t.Fatalf("binary LoadSeed: %v", err)
 	}
-	gj := New(Options{InputDir: tmp, InputSeed: "randseed.json", Log: io.Discard})
-	if err := gj.loadSeed(); err != nil {
-		t.Fatalf("json loadSeed: %v", err)
+	rj := prng.NewRNG()
+	if err := store.LoadSeed(rj, filepath.Join(tmp, "randseed.json")); err != nil {
+		t.Fatalf("json LoadSeed: %v", err)
 	}
-	if !bytes.Equal(gb.RNG.Seed(), gj.RNG.Seed()) {
-		t.Errorf("binary %x != json %x", gb.RNG.Seed(), gj.RNG.Seed())
+	if !bytes.Equal(rb.Seed(), rj.Seed()) {
+		t.Errorf("binary %x != json %x", rb.Seed(), rj.Seed())
+	}
+}
+
+// TestSaveSeedRoundTrip writes both seed forms and reads each back unchanged.
+func TestSaveSeedRoundTrip(t *testing.T) {
+	raw := []byte{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16}
+	tmp := t.TempDir()
+	src := prng.NewRNG()
+	src.Load(raw)
+
+	if err := store.SaveSeed(src, tmp); err != nil {
+		t.Fatalf("SaveSeed: %v", err)
+	}
+
+	for _, name := range []string{"randseed", "randseed.json"} {
+		rng := prng.NewRNG()
+		if err := store.LoadSeed(rng, filepath.Join(tmp, name)); err != nil {
+			t.Fatalf("LoadSeed %s: %v", name, err)
+		}
+		if !bytes.Equal(rng.Seed(), raw) {
+			t.Errorf("%s round-trip = %x, want %x", name, rng.Seed(), raw)
+		}
 	}
 }
