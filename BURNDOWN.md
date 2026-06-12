@@ -12,7 +12,18 @@ It surfaces as a nil-pointer panic during `makeRoads` →
 `bridgeMountainPorts` → `bridgeMountainSup` (`pkg/mapgen/roads.go:272`) for some
 seeds; the canonical `slartibartfast?\n` seed is unaffected.
 
-- **Status:** deferred until it actually blocks us.
+- **Status:** fix handed upstream (2026-06-11); awaiting their push, then we
+  port it. The upstream prompt asks them to change the return in
+  `adjacent_tile_water` (C `mapgen/mapgen.c:1121`) to
+  `(p && p->terrain == terr_ocean) ? p : NULL`, which is output-neutral for all
+  currently-passing seeds (it only converts the slot-8 crash into a valid secret
+  sea route), and to regenerate goldens plus add a reproducing-seed regression
+  test. The C `adjacent_tile_terr` (`mapgen.c:1138`) has the identical
+  off-by-one but is off the crash path and would churn terrain goldens, so it was
+  flagged as an optional, separate upstream commit — if upstream skips it, we
+  inherit the same latent twin in `adjacentTileTerr` (`generator.go:388`) and
+  should keep tracking it here. Until upstream lands, the port still reproduces
+  the panic; do not "fix" it locally ahead of them.
 - **Root cause (confirmed, faithful to C):** `adjacentTileWater`
   (`generator.go:360`) ends with `if i < MaxDir { return p }; return nil`,
   mirroring the C `(i < MAX_DIR) ? p : NULL`. When the ocean-adjacent direction
